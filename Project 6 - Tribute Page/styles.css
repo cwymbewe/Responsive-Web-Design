@@ -1,0 +1,89 @@
+html {
+    background-color: white;
+    margin: 10px 5px;
+    padding: 1px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width: 100vw;
+}
+ body {
+    margin: 5px;
+    background-color: rgba(238,238,238, 0.825);
+    padding: 10px 0;
+    border-radius: 10px;
+ }
+
+#title {
+    display: block;
+    text-align: center;
+    width:90vw;
+}
+
+h1, p {
+    padding: 2px;
+    margin: 1px;
+}
+
+header > p {
+    font-size: 18px;
+}
+
+#main {
+    margin: 10px;
+    padding: 5px;
+}
+
+#img-div {
+    padding: 10px;
+    display: block;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 0;
+}
+
+#image {
+    max-width: 100%;
+    height:auto;
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+#img-caption {
+    margin: 5px 0 0;
+}
+
+h3 {
+    text-align: center;
+    margin: 5px auto ;
+}
+
+ul li {
+    margin: 5px;
+    padding: 1px;
+    font-size: 14px;
+}
+li > span {
+    font-weight: bold;
+    font-size:medium;
+}
+
+main > p {
+    /* border: 1px solid green; */
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+span {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+main span p {
+    display: inline;
+    margin: 0;
+    padding: 0;
+}
