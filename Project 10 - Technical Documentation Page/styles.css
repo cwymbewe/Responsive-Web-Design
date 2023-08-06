@@ -1,0 +1,50 @@
+html {
+    border: 1px solid red;
+    width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+body {
+    border: 1px solid blue;
+    margin: 0 10px 0 150px;
+    padding: 0 2px;
+    
+    
+}
+
+#navbar {
+    border: 1px solid red;
+    width: 150px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-color: #ccc;
+
+ 
+}
+
+#navbar a {
+    border: 1px solid red;
+    width: inherit; 
+    display:block;
+}
+
+section {
+    border: 1px solid green;
+    width: 80%;
+}
+
+@media screen and (max-height: 768px) {
+    #navbar {
+        padding-top: 10px;
+    }    
+
+    .nav-link {
+        font-size: medium;
+    }
+}
