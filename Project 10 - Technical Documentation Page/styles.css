@@ -107,3 +107,21 @@ li > .indexes, li > .triggers {
     margin: 5px 0;
     font-size: 14px;
 }
+
+@media only screen and (max-width: 600px){
+    body {
+        background-color: lightblue;
+    }
+
+    #navbar, .nav-link {
+        background-color: lightgrey;
+        color: black;
+    }
+
+
+    span[class="query"], 
+    span[class="alter"] {
+        color: red;
+        background-color: cornsilk;
+    }
+}
