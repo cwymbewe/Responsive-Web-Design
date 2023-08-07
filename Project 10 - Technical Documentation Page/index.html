@@ -10,23 +10,33 @@
     <main id="main-doc">
         <!-- NAVBAR SECTION -->
         <nav id="navbar">    
-            <header><h1>PostgreSQL Documentation</h1></header>
+            <header><h1 id="menu">PostgreSQL Documentation</h1></header>
             <div class="vertical-menu">
-                <a class="nav-link" href="#What_is_PostgreSQL">What Is PostgreSQL</a>
-                <a class="nav-link" href="#Getting_Started_with_PostgreSQL">Getting Started with PostgreSQL</a>
-                <a class="nav-link" href="#PostgreSQL_Views">PostgreSQL Views</a>
-                <a class="nav-link" href="#PostgreSQL_Indexes">PostgreSQL Indexes</a>
-                <a class="nav-link" href="#PostgreSQL_Triggers">PostgreSQL Triggers</a>
+                <div class="myLinks">
+                    <a class="nav-link" href="#What_is_PostgreSQL">What Is PostgreSQL</a>
+                </div>
+                <div class="myLinks">
+                    <a class="nav-link" href="#Getting_Started_with_PostgreSQL">Getting Started with PostgreSQL</a>
+                </div>
+                <div class="myLinks">
+                    <a class="nav-link" href="#PostgreSQL_Views">PostgreSQL Views</a>
+                </div>
+                <div class="myLinks">
+                    <a class="nav-link" href="#PostgreSQL_Indexes">PostgreSQL Indexes</a>
+                </div>
+                <div class="myLinks">
+                    <a class="nav-link" href="#PostgreSQL_Triggers">PostgreSQL Triggers</a>
+                </div>
             </div>
         </nav>
 
         <!-- SECTION 1 -->
         <section class="main-section" id="What_is_PostgreSQL">
             <header><h2 class="header">What Is PostgreSQL</h2></header>
-            <p>PostgreSQL ia a powerful, open source object-relational database system with over 35 years of active development.</p>
+            <p>PostgreSQL is a powerful, open source object-relational database system with over 35 years of active development.</p>
             <span>
-                <p>The ability of PostgreSQL to support both SQL (relational) and JSON (non-relational) querying has earned it a strong reputation for reliability, data integrity, feature robustness, and performance.</p>
-                <p>Hence its no surprise that PostgreSQL has become the open-source relational database <strong>running on all major operating systems</strong>  of choice for many people and organisations.</p>
+                <p>Its ability to support both SQL (relational) and JSON (non-relational) querying has earned it a strong reputation for reliability, data integrity, feature robustness, and performance.</p>
+                <p>As such, it is no surprise that PostgreSQL is the open-source relational database of choice for many people and organizations, <strong>running on all major Operating Systems.</strong></p>
                 <p>Below is an inexhaustive list of various modern features offered by PostgreSQL:</p> 
             </span>
             <ul>
@@ -46,19 +56,19 @@
         <!-- SECTION 2 -->
         <section class="main-section" id="Getting_Started_with_PostgreSQL">
             <header><h2 class="header">Getting Started with PostgreSQL</h2></header>
-            <p>This section helps you get started with PostgreSQL on Linux by achieving the following:</p>
+            <p>This section helps you get started with PostgreSQL on <strong>Linux</strong> by achieving the following:</p>
             <ol>
-                <li>show you how to install PostgreSQL on Linux,</li>
-                <li>connect to PostgreSQL using the <span>psql</span> tool,</li>
-                <li>load a sample database into the PostgreSQL for practising</li>
+                <li>show you how to install PostgreSQL on Linux;</li>
+                <li>connect to PostgreSQL using the <span class="postgres">psql</span> tool;</li>
+                <li>load a sample database into the PostgreSQL for practising.</li>
             </ol>
-            <h3>Install PostgreSQL Linux</h3>
+            <h3 id="Install_PostgreSQL_Linux">Install PostgreSQL Linux</h3>
             <p>Most Linux platforms such as Debian, Red Hat/ CentOS, SUSE, and Ubuntu have PostgreSQL integrated with their package management.</p>
             <p>It is recommended that you install PostgreSQL this way since it ensures a proper integration with the operating system including automatic patching and other upgrade management functionality.</p>
             <p>To download and install PostgreSQL on Linux, visit the <a id="postgresql" href="https://www.postgresql.org/download/linux/">download page</a> and select your Linux distribution.</p>
             <p>Once on the Ubuntu option page, execute the below commands in the order provided:</p>
             <ol>
-                <li> create the file repository configuration
+                <li> create the file repository configuration:
                     <code>
                         $ sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
                     </code>
@@ -68,26 +78,25 @@
                         $ wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
                     </code>
                 </li>
-                <li> update the package list
+                <li> update the package list:
                     <code>
                         $ sudo apt-get update
                     </code>
                 </li>
-                <li> install the latest version of PostgreSQL
+                <li> install the latest version of PostgreSQL:
                     <code>
                         $ sudo apt-get install postgresql
                     </code>
                 </li>
             </ol>
-            <h3>Connect to the PostgreSQL database server via psql</h3>
-            <p>In PostgreSQL, a user account is referred to as a <a href="">role</a></p>
-            <p>By default, PostgreSQL uses <strong>ident</strong> authentication</p>
+            <h3 id="Connect_to_the_PostgreSQL">Connect to the PostgreSQL database server via psql</h3>
             <span>
-                <p>It means that PostgreSQL will associate its roles with the system accounts of Linux.</p>
-                <p>If a role exists in PostgreSQL, the same Linux user account with the same name is able to log is as that role</p>
+                <p>In PostgreSQL, a user account is referred to as a <strong>role</strong>.</p>
+                <p>By default, PostgreSQL uses <strong>ident</strong> authentication, meaning that PostgreSQL will associate its roles with the system accounts of Linux.</p>
+                <p>That is to say, if a role exists in PostgreSQL, the same Linux user account with the same name is able to log is as that role.</p>
             </span>
-            <p>When you installed PostgreSQL the installation process created a user account called <span class="postgres">postgres</span> associated with the default <span class="postgres">postgres</span> role.</p>
-            <p>To connect to PostgreSQL using the <span class="postgres">postgres</span> role, you switch over to the <span class="postgres">postgres</span> account on your server by following the following commands: </p>
+            <p>The PostgreSQL installation process above created a user account called <span class="postgres">postgres</span> associated with the default <span class="postgres">postgres</span> role.</p>
+            <p>To connect to PostgreSQL using the <span class="postgres">postgres</span> role, switch over to the <span class="postgres">postgres</span> account on your server by entering the following commands: </p>
             <ol>
                 <li>
                     <code>
@@ -104,7 +113,7 @@
                     <code>
                         postgres=#
                     </code>
-                    <p>From her you can interact with the PostgreSQLlike using a query.</p>
+                    <p>From here you can interact with the PostgreSQL like using a query.</p>
                 </li>
                 <li> To quit PostgreSQL, run the below command:
                     <code>
@@ -117,7 +126,7 @@
                     </code>
                 </li>
             </ol>
-            <h3>Load the sample database</h3>
+            <h3 id="Load_a_sample_database">Load the sample database</h3>
             <p>To load the sample database into the PostgreSQL database server, follow the below steps:</p>
             <ol>
                 <li>
@@ -126,7 +135,7 @@
                     </code>
                     <p>Enter your password and hit <span class="postgres">Enter</span> </p>
                 </li>
-                <li>download the sample database using <span class="postgres">curl</span> tool.
+                <li>download the sample database using <span class="postgres">curl</span> tool:
                     <code>
                         $ curl -O https://sp.postgresqltutorial.com/wp-content/uploads/2019/05/dvdrental.zip
                     </code>
@@ -189,22 +198,25 @@
         <!-- SECTION 3 -->
         <section class="main-section" id="PostgreSQL_Views">
             <header><h2 class="header">PostgreSQL Views</h2></header>
+            <p>In this section, you will learn about the PostgreSQL views concept and how to manage views such as creating, modifying, and removing views from the database.</p>
+            
             <span>
-                <p>A view is a named query that provides another way to present data in the database</p>
-                <p>It is defined based on the on one or more tables which are known as data tables</p>
-                <p>Views are useful for wrapping a commonly used complex query</p>
+                <p>A view is a named query that provides another way to present data in the database.</p>
+                <p>It is defined based on one or more tables (known as data tables).</p>
+                <p>Views are useful for wrapping a commonly used complex query.</p>
             </span>
-            <span>
-                <p>In this section, you will learn about the PostgreSQL views concept and how to manage views such as creating, modifying, and removing views from the database.</p>
+            
                 <p>NB* A view does not physically store data, however you can query a view using the <span class="query">SELECT</span>statement. </p>
-            </span>
+            
             <h3>Creating PostgreSQL Views</h3>
-            <p>To create a view, we use <span class="query">CREATE VIEW</span>statement, syntax below:</p>
+            <p>To create a view, we use <span class="query">CREATE VIEW</span> statement, syntax below:</p>
             <code>
                 CREATE VIEW view_name AS query;
             </code>
             <h3>Changing PostgreSQL Views</h3>
-            <p>To change the defining query of a view, you use the <span class="query">CREATE VIEW</span>statement with <span class="query">OR REPLACE</span> addition as follows: </p>
+            <span>
+                <p>To change the defining query of a view, you use the <span class="query">CREATE VIEW</span> statement with <span class="query">OR REPLACE</span> addition as follows: </p>
+            </span>
             <code>
                 CREATE OR REPLACE view_name 
                 AS 
@@ -219,15 +231,19 @@
             </span>
             <span>
                 <p>PostgreSQL allows you to set a default value for a column name, change the view's schema, set or reset option of a view.</p>
-                <p>For detailed information on altering view;s definition, <a href="https://www.postgresql.org/docs/current/sql-alterview.html">click here</a></p>
+                <p>For detailed information on altering view's definition, <a href="https://www.postgresql.org/docs/current/sql-alterview.html">click here</a></p>
             </span>
             <h3>Removing PostgreSQL Views</h3>
-            <p>To remove existing view in PostgreSQL, you use the <span class="query">DROP VIEW</span> statement, see syntax below: </p>
+            <span>
+                <p>To remove existing view in PostgreSQL, you use the <span class="query">DROP VIEW</span> statement, see syntax below: </p>
+            </span>
             <code>
                 DROP VIEW [ IF EXISTS ] view_name;
             </code>
-            <p>Note, the <span class="query">IF EXIST</span> option to the statement ensures that the query does not throw an err should you try to remove a view that does not exist in the database.</p>
-            <p>It therefore instruct PostgreSQL to remove the view if it exists, otherwise do nothing.</p>
+            <span>
+                <p>Note, the <span class="query">IF EXIST</span> option to the statement ensures that the query does not throw an err should you try to remove a view that does not exist in the database.</p>
+                <p>It therefore instruct PostgreSQL to remove the view if it exists, otherwise do nothing.</p>
+            </span>
         </section>
         <!-- SECTION 4 -->
        <section class="main-section" id="PostgreSQL_Indexes">
@@ -242,7 +258,7 @@
             <ul>
                 <li><span class="indexes">Create Index</span> - shows how to define a new index for a table</li>
                 <li><span class="indexes">Drop Index</span> - guides you on how to remove an existing index</li>
-                <li><span class="indexes">List Indexes</span> - shows you how to list alll indexes in the PostgreSQL database</li>
+                <li><span class="indexes">List Indexes</span> - shows you how to list all indexes in the PostgreSQL database</li>
                 <li><span class="indexes">Index Types</span> - discusses various types of indexes in PostgreSQL</li>
                 <li><span class="indexes">Unique Index</span> - provides you with steps of defining unique indexes</li>
                 <li><span class="indexes">Index on Expression</span> - shows you how to define an index based on expressions</li>
@@ -257,7 +273,7 @@
        <section class="main-section" id="PostgreSQL_Triggers">
         <header><h2 class="header">PostgreSQL Triggers</h2></header>
         <span>
-            <p>A PostgreSQL trigger is a <a href="">function</a> invoked automatically whenever an event such as <em>insert</em>, <em>update</em>, <em>delete</em> occurs. </p>
+            <p>A PostgreSQL trigger is a function invoked automatically whenever an event such as <em>insert</em>, <em>update</em>, <em>delete</em> occurs. </p>
             <p>In this section, you will learn about triggers and how to manage them effectively.</p>
         </span>
         <span>
