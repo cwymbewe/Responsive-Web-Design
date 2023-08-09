@@ -1,0 +1,22 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "FreeCodeCamp",
+		"cSpell.words": [
+			"dbname",
+			"dropbtn",
+			"dvdrental",
+			"inexhaustive",
+			"ORDBMS",
+			"pgdg",
+			"psql"
+		]
+	}
+}
