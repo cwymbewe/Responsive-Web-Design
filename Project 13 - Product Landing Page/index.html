@@ -3,24 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MTfc Product Landing Page</title>
+    <title>Shopritesend Landing Page</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <!-- SECTION 1 -->
-    <header id="header">Original Trombones
-        <img src="" alt="" id="header-img">
+    <header id="header">
+        <div class="logo">
+            <img src="./images/Tambira_icon.png" 
+                alt="Tambira" 
+                id="header-img" 
+                loading="lazy"
+                width="10%"
+                height="10%">
+            <div id="logo-name">Tambira</div>
+        </div>
+        
         <nav id="nav-bar">
             <a href="#" class="nav-link">Features</a>
             <a href="#" class="nav-link">How It Works</a>
             <a href="#" class="nav-link">Pricing</a>
         </nav>
+
     </header>
     <!-- SECTION 2 FEATURES-->
-    <h2>Handcrafted, home-made masterpieces</h2>
-    <form id="form" action="post">
+    <h2>Send Money Globally the Cheaper Way</h2>
+    <form id="form" action="https://www.freecodecamp.com/email-submit">Get a Quote
+        <label for="number">Enter your phone number</label>
+        <input type="number" id="number" name="number" placeholder="Enter your phone number" required>
         <label for="email"></label>
         <input type="email" id="email" placeholder="Enter your email" required>
+        <input type="number" id="amount-1">
         <input type="submit" name="Get Started" id="submit">
     </form>
     
