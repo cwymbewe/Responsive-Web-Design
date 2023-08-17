@@ -3,31 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tambira Landing Page</title>
+    <title>ShopriteSend Landing Page</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <!-- SECTION 1 -->
     <header id="header">
-        <div class="logo">
-            <img src="./images/Tambira_icon.png" 
-                alt="Tambira" 
+        <div class="logo-container">
+            <img src="./images/ShopriteSend_icon.png" 
+                alt="ShopriteSend" 
                 id="header-img" 
                 loading="lazy"
-                width="10%"
-                height="10%">
-            <div id="logo-name">Tambira</div>
+                width="50"
+                height="50">
+            <span id="header-title">ShopriteSend</span>
         </div>
         <nav id="nav-bar">
-            <a href="#" class="nav-link">Features</a>
-            <a href="#" class="nav-link">How It Works</a>
-            <a href="#" class="nav-link">Pricing</a>
+            <a href="#features" class="nav-link">Features</a>
+            <a href="#how_it_works" class="nav-link">How It Works</a>
+            <a href="#testimonials" class="nav-link">Testimonials</a>
         </nav>
+        <div id="menu">
+            <div class="menu-lines"></div>
+            <div class="menu-lines"></div>
+            <div class="menu-lines"></div>
+        </div>
     </header>
-    <!-- SECTION 2 FEATURES-->
-    <section class="sections">
-        <h2>Send Money Globally the Cheaper Way</h2>
+    <!-- SECTION 2 FORM-->
+    <section class="form-section">
+        <h1>Send Money Globally the Cheaper Way</h1>
         <form id="form" action="https://www.freecodecamp.com/email-submit" method="post">
             <div class="input-data">
                 <i class="fa fa-mobile icon"></i>
@@ -39,19 +44,72 @@
                 <label for="email"></label>
                 <input type="email" id="email" name="email" placeholder="Enter your email" required>
             </div>
-            <button type="submit" id="submit">Get Started</button>
-
+            <input type="submit" id="submit" value="Get Started"></>
         </form>
     </section>
-    <!-- SECTION 3 HOW IT WORKS-->
-    <h2></h2>
-    <ul>
-        <li>Fast Shipping</li>
-        <li>Quality Assurance</li>
-        <li></li>
-    </ul>
-    <!-- SECTION 4 PRICING-->
-    <h2></h2>
-    
+    <!-- SECTION 3 FEATURES-->
+    <section class="sections">
+        <h2 id="features">Features</h2>
+        <ul>
+            <li>
+                <h3>Super Safe</h3>
+                <span>Our anti-fraud technology ensures that your personal information is confidential and protected.</span>
+            </li>
+            <li>
+                <h3>Super Fast</h3>
+                <span>Send money in minutes and receive instant cash collections in your destination country.</span>
+            </li>
+            <li>
+                <h3>Super Service</h3>
+                <span>Stay up-to-date throughout the process with SMS updates or email notifications.</span>
+            </li>
+            <li>
+                <h3>Super Prices</h3>
+                <span>Our exchange rates are real, and our costs are just 4%.</span>
+            </li>
+        </ul>
+    </section>
+    <!-- SECTION 4 VIDEO-->
+    <section class="sections">
+        <h2 id="how_it_works">How it Works</h2>
+        <iframe id="video" src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FShopriteSend%2Fvideos%2F452398686639381%2F&show_text=false&width=560&t=0" 
+                width="560" height="314" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" 
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen="true">
+        </iframe>
+    </section>
+     <!-- SECTION 4 TESTIMONIALS-->
+    <section class="sections">
+        <h2 id="testimonials">Testimonials</h2>
+        <p>We are committed to giving our customers the ShopriteSend service they deserve.</p>
+        <div class="testimony">
+            <div class="client1">
+                <p>Your service has been great to me and I will continue to use it on a monthly basis to support my children in the UK.</p>
+                <span>-Bassam</span>                
+            </div>
+            <div class="client2">
+                <p>Special thanks to the support team for their prompt response and clear explanation</p>
+                <span>-Craig</span>                    
+            </div>
+            <div class="client3">
+                <p>Exceptional service. Thank you ShopriteSend team</p>
+                <span>-Tariro</span>
+            </div>
+            <div class="client4">
+                <p>"Very convenient, and super fast. Excellent service."</p>
+                <span>-John</span>                
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div>
+            <ul>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <p><a href="https://www.freecodecamp.org">Visit our website</a></p>
+        <p class="address">Unit 7 Pelican Park</p>
+    </footer>
 </body>
 </html>
