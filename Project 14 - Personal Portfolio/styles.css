@@ -41,11 +41,11 @@
 
 section {
     text-align: center;
+    margin-bottom: 30px;
 }
 
 #welcome-section {
     margin-top: 65px !important;
-    /* text-align: center; */
 }
 
 #welcome-section h1 {
@@ -92,4 +92,65 @@ p {
     object-fit: cover;
     width: 100%;
     height: calc(100% - 1rem);
+}
+
+/* LINK SECTION */
+
+#btn {
+    padding: 10px 20px;
+    font-size: 1em;
+    background-color: #db9b14;
+    max-width: 10%;
+    border-radius: 2%;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+#btn a, .project-tile > a{
+cursor: pointer;
+text-decoration: none;
+display: inline-block;
+position: relative;
+transition: all 0.5s;
+}
+
+#btn a:after, .project-tile > a:after {
+    content: '\00bb';
+    position: absolute;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+
+}
+
+#btn:hover {
+    background-color: green;
+    opacity: 1;
+}
+
+/* CONTACTS SECTION */
+
+.contact-links {
+    display: flex;
+    justify-content: space-evenly ;
+    color: white;
+    font-size: large;
+}
+.fa {
+    /* border: 1px solid red; */
+    margin: 5px 0;
+    padding: 5px;
+}
+
+.contact-links a {
+    text-decoration: none;
+}
+
+/* FOOTER SECTION */
+
+ span {
+
+    font-style: italic;
+    font-size: large;
+    font-weight: 100;
 }
